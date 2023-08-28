@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <form action="#" method="post">
+        Email:<br>
+        <input type="email" name="email">
+        <br><br>
+        Password:<br>
+        <input type="password" name="password" minlength="8">
+        <br><br>
+        Birthdate:<br>
+        <input type="date" name="birthdate">
+        <br><br>
+        Credit Card:<br>
+        <input type="text" name="creditcard" pattern="[0-9]{13,16}" title="Enter a valid card number (13-16 digits)">
+        <br><br>
+
+        Upload File:<br>
+        <input type="file" name="file" accept=".pdf,.doc,.docx">
+        <br><br>
+
+        Personal Website:<br>
+        <input type="url" name="url" placeholder="https://example.com">
+        <br><br>
+
+        Quantity:<br>
+        <input type="number" name="quantity" min="1" max="10" step="2" required>
+        <br><br>
+
+        Favourite Color:<br>
+        <input type="color" name="color" required>
+        <br><br>
+
+        Slider Value:<br>
+        <input type="range" name="range" min="0" max="100" step="1" required>
+        <br><br>
+
+        Agree to terms:<br>
+        <input type="checkbox" name="checkbox">
+        <span>You must agree to the terms.</span>
+        <br><br>
+
+
+
+
+        <button type="submit">Submit</button>
+
+    </form>
+</body>
+
+</html>
