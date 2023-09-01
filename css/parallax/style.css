@@ -1,0 +1,67 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-weight: 400;
+    color: gray;
+    line-height: 1.8rem;
+    letter-spacing: 0.2rem;
+}
+
+.pimg1,
+.pimg2,
+.pimg3 {
+    position: relative;
+    opacity: 0.7;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.pimg1 {
+    background-image: url("https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
+    min-height: 100%;
+}
+
+.pimg2 {
+    background-image: url("https://images.unsplash.com/photo-1502472584811-0a2f2feb8968?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
+    min-height: 400px;
+
+}
+
+.pimg3 {
+    background-image: url("https://images.unsplash.com/photo-1490365728022-deae76380607?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1548&q=80");
+    min-height: 400px;
+
+}
+
+.section {
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.section-light {
+    background-color: whitesmoke;
+}
+
+.section-dark {
+    background-color: black;
+    color: white;
+}
+
+.border {
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+.ptext {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+}
+
+.ptext .border.trans {
+    background-color: transparent;
+}
