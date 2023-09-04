@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        .face {
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+            border-radius: 50%;
+            position: relative;
+            margin: 100px auto;
+        }
+
+        .eye {
+            width: 80px;
+            height: 30px;
+            border: 2px solid black;
+            position: absolute;
+            top: 60px;
+        }
+
+        .nose {
+            width: 20px;
+            height: 40px;
+            background-color: red;
+            position: absolute;
+            top: 140px;
+            left: 140px;
+        }
+
+        .lip {
+            width: 100px;
+            height: 30px;
+            background-color: red;
+            position: absolute;
+            top: 220px;
+            left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Assignment</h1>
+    <p>this is a para</p>
+
+    <div class="face">
+        <div class="eye" style="left:40px;"></div>
+        <div class="eye" style="right:40px;"></div>
+        <div class="nose"></div>
+        <div class="lip"></div>
+    </div>
+</body>
+
+</html>
