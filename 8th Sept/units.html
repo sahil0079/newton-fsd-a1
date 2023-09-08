@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units in CSS</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .rectangle {
+            background-color: tomato;
+            height: 60px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* .five-hundred-pixels {
+            width: 500px;
+        }
+
+        .fifty-percent {
+            width: 50%;
+        } */
+
+        /* .parent {
+            width: 250px;
+            border: 5px solid black;
+        } */
+
+        .fifty-vw {
+            width: 50vw;
+        }
+
+        .fifty-percent {
+            width: 50%;
+        }
+
+        .parent {
+            width: 250px;
+            border: 5px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Units in CSS</h1>
+
+    <!-- <div class="rectangle five-hundred-pixels">five hundred pixels</div>
+    <div class="rectangle fifty-percent">fifty-percent</div>
+
+    <div class="parent">
+        <div class="rectangle five-hundred-pixels">five hundred pixels</div>
+        <div class="rectangle fifty-percent">fifty-percent</div>
+    </div> -->
+
+
+    <!-- body is 1440px -->
+    <div class="rectangle fifty-vw">fifty-vw</div>
+    <div class="rectangle fifty-percent">fifty-percent</div>
+
+    <!-- viewport is 1440px -->
+    <div class="parent">
+        <!-- parent is 250px -->
+        <div class="rectangle fifty-vw">fifty-vw</div>
+        <div class="rectangle fifty-percent">fifty-percent</div>
+    </div>
+
+</body>
+
+</html>
