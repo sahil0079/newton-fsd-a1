@@ -1,0 +1,123 @@
+#navbar {
+    height: 45px;
+    margin: 0 auto;
+    padding: 0 15%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+#logo {
+    width: 100px;
+    float: left;
+    margin-top: 8px;
+    margin-right: 5px;
+}
+
+.navbarSection {
+    display: flex;
+    align-items: center;
+    float: left;
+    border-left: 1px solid grey;
+    height: 45px;
+}
+
+.navbarSection a {
+    text-decoration: none;
+    color: black;
+}
+
+#signinImage {
+    margin: 8px;
+    float: left;
+    width: 30px;
+    border-radius: 50%;
+}
+
+#signinText {
+    font-weight: bold;
+    font-size: 95%;
+    position: relative;
+    padding-right: 50px;
+}
+
+.navbarMenu {
+    font-weight: bold;
+    font-size: 95%;
+    padding: 0 15px;
+}
+
+.navbarMenuMore {
+    font-weight: bold;
+    font-size: 95%;
+    padding: 0 10px;
+
+}
+
+#moreArrow {
+    margin-left: 5px;
+    width: 20px;
+}
+
+#searchBar {
+    background-color: lightgray;
+    border: none;
+    outline: 0;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 3px;
+    margin: 9px 0 9px 9px;
+}
+
+/* .clear {
+    clear: both;
+} */
+
+.menuContainerOne {
+    width: 100%;
+    background-color: #BB1919;
+    height: 60px;
+    border-top: 1px #cccccc solid;
+}
+
+h1 {
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    margin-left: 12%;
+    padding-top: 10px;
+}
+
+.menuContainerTwo {
+    width: 100%;
+    padding-left: 12%;
+    background-color: #A91717;
+    height: 42px;
+    margin-top: -10px;
+
+}
+
+.container {
+    margin: 10px 10px 0 10px;
+    float: left;
+    border-left: 1px solid #BB4545;
+    height: 25px;
+    padding-left: 10px;
+
+}
+
+.container a {
+    text-decoration: none;
+    color: white;
+}
+
+.home {
+    border: none;
+}
+
+#menuArrow {
+    width: 10px;
+}
