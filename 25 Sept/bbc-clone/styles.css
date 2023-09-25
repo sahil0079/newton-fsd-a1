@@ -7,6 +7,8 @@
 
 body {
     margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 #logo {
@@ -82,7 +84,7 @@ body {
     border-top: 1px #cccccc solid;
 }
 
-h1 {
+.menuContainerOne h1 {
     color: white;
     margin: 0;
     padding: 0;
@@ -120,4 +122,76 @@ h1 {
 
 #menuArrow {
     width: 10px;
+}
+
+.pageContainer {
+    margin: 0 auto;
+    padding: 0 15%;
+}
+
+#mainArticle {
+    width: 60%;
+    float: left;
+    padding-right: 20px;
+    border-right: 1px solid lightgrey;
+}
+
+#mainArticle a {
+    text-decoration: none;
+    color: black;
+}
+
+#articleSummary {
+    color: #5a5a5a;
+    margin-top: 5px;
+    margin-right: 18px;
+    width: 260px;
+    float: left;
+    font-size: 15px;
+}
+
+.articleContainer {
+    display: flex;
+    width: 100%;
+}
+
+#articleHr {
+    width: 46px;
+    margin-left: 0;
+    background-color: red;
+    height: 1px;
+    border: none;
+}
+
+#mainArticleHr {
+    width: 600px;
+    margin-top: 3px;
+    height: 1px;
+    border: none;
+    background-color: lightgray;
+}
+
+.card {
+    width: 200px;
+    margin-top: 10px;
+    padding: 0 20px;
+}
+
+.card-center {
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+
+}
+
+.cardImg {
+    width: 150px;
+    object-fit: contain;
+}
+
+.subSections {
+    display: flex;
+}
+
+.cardTitle {
+    font-size: 14px;
 }
