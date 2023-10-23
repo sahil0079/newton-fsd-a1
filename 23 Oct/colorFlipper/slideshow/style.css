@@ -1,0 +1,33 @@
+.slideshow-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.slide {
+    display: none;
+}
+
+img {
+    width: 100%;
+}
+
+button {
+    position: absolute;
+    top: 20%;
+    padding: 10px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.prev {
+    left: 300px;
+}
+
+
+.next {
+    right: 300px;
+}
