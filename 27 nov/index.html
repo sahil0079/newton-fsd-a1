@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 200vh;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Throttling Example</h1>
+
+
+    <script>
+
+        function throttle(func, delay) {
+            let timeoutId = null;
+            return function (...args) {
+                if (timeoutId == null) {
+                    //if there is no timer running
+                    func(...args);
+
+                    timeoutId = setTimeout(() => {
+                        timeoutId = null;
+                    }, delay)
+
+                }
+            }
+        }
+        let count = 0;
+        function fetchData() {
+            console.log('Fetching data...');
+
+            //simulate api call with random delay
+
+            setTimeout(() => {
+                console.log('Data fetched')
+
+            }, Math.random() * 1000)
+            count++;
+            console.log(count);
+        };
+
+        const throttleFetchData = throttle(fetchData, 5000)
+
+
+
+        window.addEventListener('scroll', throttleFetchData)
+
+    </script>
+</body>
+
+</html>
