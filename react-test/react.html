@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Advice</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.3/babel.min.js"
+        integrity="sha512-MIXku7j6pJ0hqd2T4WXZMGerp3BU9B91rfLRDp/McDBNNdnwTD+yLJaz9AHcYXT6k16dYTkG9S2KRPGxaBIfBQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type='text/jsx'>
+
+        function AdviceApp() {
+
+            const [count, setCount] = React.useState(0);
+            const [advice, setAdvice] = React.useState("");
+
+
+            async function getAdvice() {
+                const res = await fetch('https://api.adviceslip.com/advice');
+                const data = await res.json();
+                // console.log(data)
+    
+                //update the values
+                setCount(count + 1);
+                setAdvice(data.slip.advice)
+    
+                //manually update the dom elements
+             
+            };
+
+            console.log('AdviceApp rendered')
+            return (
+                <div>
+                    <h1 className="advice"> {advice} </h1>
+                <button className="btn" onClick={getAdvice} >Get advice</button>
+                <p>You have read <strong className="count"> {count} </strong> pieces of advice</p>
+
+                </div>
+            )
+        }
+
+
+        //render the react component to the DOM
+        ReactDOM.createRoot(document.getElementById('root')).render(<AdviceApp />)
+    </script>
+
+
+</body>
+
+</html>
