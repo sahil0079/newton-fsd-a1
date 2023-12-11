@@ -39,8 +39,8 @@ function Board({ squares, onHandleSquares }) {
   // const [squares, setSquares] = useState(Array(9).fill(null));
   const [xIsNext, setXIsNext] = useState(true);
 
-  console.log('Board rendered')
-  console.log(squares)
+  // console.log('Board rendered')
+  // console.log(squares)
 
 
   function handleClick(i) {
@@ -102,18 +102,45 @@ function Board({ squares, onHandleSquares }) {
 function TicTacToe() {
 
   const [history, setHistory] = useState([Array(9).fill(null)]);
-  const currentSquares = history[history.length - 1];
+  const [currentStep, setCurrentStep] = useState(0);
+  const currentSquares = history[Boolean(currentStep) ? currentStep : history.length - 1];
 
   function handleSquares(nextSquares) {
     setHistory([...history, nextSquares]);
+
   }
+  console.log('history', { history, currentStep })
+
+  let moves = history.map((squares, index) => {
+    let description;
+
+    if (index > 0) {
+      description = `Go to the step: ${index}`
+    } else {
+      description = 'Go to starting of the game'
+    }
+
+    function jumToStep(index) {
+      setCurrentStep(index);
+    }
+
+    return (
+      <li key={index}>
+        <button onClick={() => jumToStep(index)} >
+          {description}
+        </button>
+      </li>
+    )
+  })
   return (
     <div className='game'>
       <div className='game-board'>
         <Board squares={currentSquares} onHandleSquares={handleSquares} />
       </div>
       <div className='game-info'>
-        <h1>Info</h1>
+        <ul>
+          {moves}
+        </ul>
       </div>
     </div>
   )
