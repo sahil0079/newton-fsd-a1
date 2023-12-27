@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 48px 96px;
+  position: relative;
+  color: #444;
+}
+
+.tabs {
+  margin-bottom: 10px;
+}
+
+button {
+  color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.tab {
+  border-radius: 12px;
+  background-color: aliceblue;
+  padding: 9px 24px;
+  margin-right: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: blue;
+  transition: all 0.4s;
+}
+
+.tab.active,
+.tab:hover {
+  background-color: #364fc7;
+  color: #fff
+}
+
+.tab-content {
+  background-color: aliceblue;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.tab-content h4 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: #364fc7;
+}
+
+.tab-content p {
+  font-size: 18px;
+}
+
+.tab-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.tab-actions>button {
+  background: none;
+  text-decoration: underline;
+  color: blue;
+  font-size: 14px;
+}
+
+.hearts-counter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hearts-counter button {
+  background-color: tomato;
+  padding: 5px 9px;
+  border-radius: 5px;
+  line-height: 1;
+  color: #fff;
+}
+
+.tab-undo {
+  display: flex;
+  gap: 8px;
+}
+
+.tab-undo button {
+  padding: 8px 12px;
+  background-color: #364fc7;
+  border-radius: 5px;
+  color: #fff;
+}
