@@ -1,7 +1,7 @@
-import React, { useState, memo, useMemo } from 'react'
+import React, { useState, memo, useMemo, useCallback } from 'react'
 
 
-function Square({ items }) {
+function Square({ items, onClick }) {
 
   console.log(`Square rendered ${items.color}`)
 
@@ -10,7 +10,9 @@ function Square({ items }) {
       width: '80px',
       height: '80px',
       backgroundColor: items.color
-    }}>
+    }}
+      onClick={onClick}
+    >
 
     </div>
   )
@@ -26,6 +28,7 @@ function App() {
 
   const memoizedItems = useMemo(() => ({ color }), [color]);
 
+  const onClick = useCallback(() => { }, [])
 
   //bad way
   // const sum = useMemo(
@@ -71,7 +74,7 @@ function App() {
       <div>
         {/* <MemoizedSquare color={color} /> */}
 
-        <MemoizedSquare items={memoizedItems} />
+        <MemoizedSquare items={memoizedItems} onClick={onClick} />
 
       </div>
 
