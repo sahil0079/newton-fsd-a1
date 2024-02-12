@@ -1,0 +1,12 @@
+.userPic>img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 2px solid gray;
+}
+
+.pageNumbers {
+    color: black;
+    display: flex;
+    padding: 0 1rem;
+}
